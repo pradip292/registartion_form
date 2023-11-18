@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      background-image: url('https://i.ytimg.com/vi/IA4pnfkYxA8/maxresdefault.jpg');
+      box-sizing: border-box;
+      background-size: cover;
+        background-repeat: no-repeat;
+       
+        background-attachment: fixed;
+        
+     
+        
+    }
+    h2{
+        text-align: center;
+    }
+    form {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #4caf50;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+  <title>Registration Form</title>
+</head>
+<body>
+  
+
+  <form action="#" method="post">
+    <h2>Registration Form</h2>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" placeholder="Enter First Name" required>
+
+    <label for="middleName">Middle Name:</label>
+    <input type="text" id="middleName" name="middleName" placeholder="Enter Middle Name" required>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" placeholder="Enter Last Name" required>
+
+    <label for="course">Course Name:</label>
+    <select id="course" name="course" required>
+      <option value="" disabled selected>Choose Course</option>
+      <!-- Add your course options here -->
+    </select>
+
+    <label for="gender">Gender:</label>
+<select id="gender" name="gender" required>
+  <option value="" disabled selected>Select Gender</option>
+  <option value="Male">Male</option>
+  <option value="Female">Female</option>
+  <option value="Other">Other</option>
+</select>
+
+
+
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="+91****" required>
+
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" placeholder="Address" required></textarea>
+
+    <label for="email">Email Id:</label>
+    <input type="email" id="email" name="email" placeholder="example123@gmail.com" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Password" required>
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-Enter Password" required>
+
+    <label>THIRD YEAR ECE FEES</label>
+    <label for="generalAmount">General:</label>
+    <input type="text" id="generalAmount" name="generalAmount" placeholder="Enter Amount" required>
+
+    <label for="obcAmount">OBC:</label>
+    <input type="text" id="obcAmount" name="obcAmount" placeholder="Enter Amount" required>
+
+    <label for="paymentMethod">CHOOSE PAYMENT METHOD:</label>
+    <select id="paymentMethod" name="paymentMethod" required>
+      <option value="" disabled selected>Select Payment Method</option>
+      <option value="UPI">UPI</option>
+      <option value="CreditDebitCard">Credit/Debit Card</option>
+      <option value="RuPay">RuPay</option>
+    </select>
+
+    <input type="submit" value="Submit">
+  </form>
+
+</body>
+</html>
