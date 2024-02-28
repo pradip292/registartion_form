@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,19 +10,21 @@
       background-color: #f4f4f4;
       margin: 0;
       padding: 0;
-      background-image: url('https://i.ytimg.com/vi/IA4pnfkYxA8/maxresdefault.jpg');
+      background-image: url('https://sanjivani.org.in/wp-content/uploads/2023/05/000.jpg');
       box-sizing: border-box;
       background-size: cover;
-        background-repeat: no-repeat;
-       
-        background-attachment: fixed;
-        
-     
-        
+      background-repeat: no-repeat;
+
+      background-attachment: fixed;
+
+
+
     }
-    h2{
-        text-align: center;
+
+    h2 {
+      text-align: center;
     }
+
     form {
       max-width: 600px;
       margin: 20px auto;
@@ -37,7 +40,8 @@
       margin-bottom: 8px;
     }
 
-    input, select {
+    input,
+    select {
       width: 100%;
       padding: 8px;
       margin-bottom: 12px;
@@ -58,68 +62,96 @@
   </style>
   <title>Registration Form</title>
 </head>
-<body>
-  
 
-  <form action="#" method="post">
+<body>
+
+
+  <form action="">
     <h2>Registration Form</h2>
     <label for="firstName">First Name:</label>
-    <input type="text" id="firstName" name="firstName" placeholder="Enter First Name" required>
+    <input type="text" id="firstName" name="firstName" placeholder="Enter First Name">
 
     <label for="middleName">Middle Name:</label>
-    <input type="text" id="middleName" name="middleName" placeholder="Enter Middle Name" required>
+    <input type="text" id="middleName" name="middleName" placeholder="Enter Middle Name">
 
     <label for="lastName">Last Name:</label>
-    <input type="text" id="lastName" name="lastName" placeholder="Enter Last Name" required>
+    <input type="text" id="lastName" name="lastName" placeholder="Enter Last Name">
 
     <label for="course">Course Name:</label>
-    <select id="course" name="course" required>
+    <select id="course" name="course">
       <option value="" disabled selected>Choose Course</option>
-      <!-- Add your course options here -->
+      <option value="Male">Information Technology</option>
+      <option value="Female">Comuter Engineering</option>
+      <option value="Other">Other</option>
     </select>
 
     <label for="gender">Gender:</label>
-<select id="gender" name="gender" required>
-  <option value="" disabled selected>Select Gender</option>
-  <option value="Male">Male</option>
-  <option value="Female">Female</option>
-  <option value="Other">Other</option>
-</select>
+    <select id="gender" name="gender">
+      <option value="" disabled selected>Select Gender</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select>
 
 
 
     <label for="phoneNumber">Phone Number:</label>
-    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="+91****" required>
-
-    <label for="address">Address:</label>
-    <textarea id="address" name="address" placeholder="Address" required></textarea>
+    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="+91****">
 
     <label for="email">Email Id:</label>
-    <input type="email" id="email" name="email" placeholder="example123@gmail.com" required>
+    <input type="email" id="email" name="email" placeholder="example123@gmail.com">
 
     <label for="password">Password:</label>
-    <input type="password" id="password" name="password" placeholder="Password" required>
+    <input type="password" id="password" name="password" placeholder="Password">
 
     <label for="confirmPassword">Confirm Password:</label>
-    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-Enter Password" required>
+    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-Enter Password">
 
-    <label>THIRD YEAR ECE FEES</label>
-    <label for="generalAmount">General:</label>
-    <input type="text" id="generalAmount" name="generalAmount" placeholder="Enter Amount" required>
-
-    <label for="obcAmount">OBC:</label>
-    <input type="text" id="obcAmount" name="obcAmount" placeholder="Enter Amount" required>
-
-    <label for="paymentMethod">CHOOSE PAYMENT METHOD:</label>
-    <select id="paymentMethod" name="paymentMethod" required>
-      <option value="" disabled selected>Select Payment Method</option>
-      <option value="UPI">UPI</option>
-      <option value="CreditDebitCard">Credit/Debit Card</option>
-      <option value="RuPay">RuPay</option>
-    </select>
-
-    <input type="submit" value="Submit">
+    <input type="button" style="background-color: rgb(32, 195, 195); color: black;" value="Proceed for Payment" id="submit">
   </form>
+<script>
+  
+  const submitBtn = document.querySelector("#submit")
+    submitBtn.addEventListener("click", validateForm, false)
+    function validateForm() {
+      event.preventDefault();
+      var firstName = document.getElementById('firstName').value;
+      var lastName = document.getElementById('lastName').value;
+      var phoneNumber = document.getElementById('phoneNumber').value;
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+      var confirmPassword = document.getElementById('confirmPassword').value;
 
+      if (firstName === '') {
+        alert('Please fill in all fields');
+        return false;
+      }
+      if (lastName === '') {
+        alert('Please fill in all fields');
+        return false;
+      }
+      if (phoneNumber === '') {
+        alert('Please fill in all fields');
+        return false;
+      } if (email === '') {
+        alert('Please fill in all fields');
+        return false;
+      } if (password === '') {
+        alert('Please fill in all fields');
+        return false;
+      }
+      if (confirmPassword === '') {
+        alert('Please fill in all fields');
+        return false;
+      }
+      if (password !== confirmPassword) {
+        alert('Passwords do not match');
+        return false;
+      }
+      window.location = "/Payment.html"
+      return true;
+    }
+</script>
 </body>
+
 </html>
